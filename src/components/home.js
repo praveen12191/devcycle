@@ -86,4 +86,8 @@ const Home = () => {
   );
 };
 
-export default Home
+export default withDevCycleProvider({
+  
+  sdkKey: process.env.REACT_APP_DVC_SDK_KEY
+})(Home);
+
