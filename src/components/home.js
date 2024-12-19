@@ -6,6 +6,7 @@ import { useVariableValue } from "@devcycle/react-client-sdk";
 import Room from "./room.js";
 
 const Home = () => {
+
   const [spin, setSpin] = useState(false);
   const [lightOn, setLightOn] = useState(true);
   const [tvOn, setTvOn] = useState(false);
@@ -15,7 +16,6 @@ const Home = () => {
   const [preSpin, setPreSpin] = useState(false);
   const [preTv, setPreTv] = useState(false);
   const [preLight, setPreLight] = useState(false);
-console.log(process.env.REACT_APP_DVC_SDK_KEY);
 
   const toggleSpin = () => {
     if (!shutDown) {
@@ -88,6 +88,6 @@ console.log(process.env.REACT_APP_DVC_SDK_KEY);
 
 export default withDevCycleProvider({
   
-  sdkKey: 'dvc_client_d9934483_615b_4f1b_b1dc_864188f00d77_3ec432d'
+  sdkKey: process.env.REACT_APP_DVC_SDK_KEY
 })(Home);
 
