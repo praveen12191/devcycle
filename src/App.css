@@ -43,7 +43,7 @@
   display: inline-block;
   width: 40px;
   height: 20px;
-  margin-top: 100px;
+  margin-top: 200px;
 }
 
 .switch input {
@@ -83,3 +83,5 @@ input:checked + .slider {
 input:checked + .slider:before {
   transform: translateX(20px);
 }
+
+
