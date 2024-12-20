@@ -57,7 +57,7 @@ const Home = () => {
 
   const buttonClick = () => {
     setSwitch(!mainSwitch);
-    let url = process.env.REACT_APP_SERVER
+    let url = process.env.REACT_APP_SERVER+'/flag'
     console.log(url,'CLICKED');
     axios
       .post(url, {
