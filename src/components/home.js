@@ -20,7 +20,7 @@ const Home = () => {
   const [preTv, setPreTv] = useState(false);
   const [preLight, setPreLight] = useState(false);
 
-  const [mainSwitch, setSwitch] = useState(false);
+  const [mainSwitch, setSwitch] = useState(true);
 
   const toggleSpin = () => {
     if (shutDown) {
@@ -57,8 +57,8 @@ const Home = () => {
 
   const buttonClick = () => {
     setSwitch(!mainSwitch);
-    let url = 'http://localhost:4001/flag';
-    console.log(url);
+    let url = process.env.REACT_APP_SERVER
+    console.log(url,'CLICKED');
     axios
       .post(url, {
         flag: mainSwitch,
